@@ -28,62 +28,62 @@ body {
 }
 
 .search-box {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .search-box input {
-    padding: 5px;
-    width: 150px;
-    border-bottom: 3px solid #00abf0;
-    font-size: 18px;
-    text-transform: capitalize;
+  padding: 5px;
+  width: 150px;
+  border-bottom: 3px solid #00abf0;
+  font-size: 18px;
+  text-transform: capitalize;
 }
 
 .search-box button {
-    cursor: pointer;
-    padding: 15px;
-    width: 25%;
-    background: #00abf0;
-    color: #ffffff;
-    border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+  width: 25%;
+  background: #00abf0;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
 .result h3 {
-    font-size: 30px;
-    color: #1f194c;
+  font-size: 30px;
+  color: #1f194c;
 }
 
 .result .word {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
 }
 
 .result button {
-    cursor: pointer;
-    background: transparent;
-    color: #ae9cff;
-    font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+  color: #ae9cff;
+  font-size: 18px;
 }
 
 .result .details {
-    display: flex;
-    gap: 10px;
-    color: #b3b6d4;
-    margin: 5px 0 20px 0;
-    font-size: 14px;
+  display: flex;
+  gap: 10px;
+  color: #b3b6d4;
+  margin: 5px 0 20px 0;
+  font-size: 14px;
 }
 
 .word-meaning {
-    color: #575a7b;
+  color: #575a7b;
 }
 
 .word-example {
-    font-style: italic;
-    color: #575a7b;
-    /* border-radius: 5px solid #ae9cff; */
-    padding-left: 20px;
-    margin-top: 30px;
+  font-style: italic;
+  color: #575a7b;
+  border-left: 3px solid #00abf0;
+  padding-left: 20px;
+  margin-top: 30px;
 }

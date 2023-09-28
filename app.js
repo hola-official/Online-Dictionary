@@ -12,18 +12,18 @@ btn.addEventListener("click", () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            console.log(data[0].meanings[0].definitions[0].definition);
             result.innerHTML = `
             <div class="word">
-                <h3>Sample</h3>
-                <button><i class="fa-solid fa-volume-up"></i></button>
+                <h3>${inputWord}</h3>
+                <button onclick="playSound()"><i class="fa-solid fa-volume-up"></i></button>
             </div>
             <div class="details">
-                <p>Pos</p>
-                <p>/Sample/</p>
+                <p>${data[0].meanings[0].partOfSpeech}</p>
+                <p>${data[0].phonetic}</p>
             </div>
             <p class="word-meaning">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-                quae.
+                ${data[0].meanings[0].definitions[0].definition}
             </p>
             <p class="word-example">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
