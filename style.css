@@ -32,13 +32,15 @@ body {
     justify-content: space-between;
     width: 100%;
 }
+
 .search-box input {
     padding: 5px;
     width: 150px;
     border-bottom: 3px solid #00abf0;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: capitalize;
 }
+
 .search-box button {
     cursor: pointer;
     padding: 15px;
