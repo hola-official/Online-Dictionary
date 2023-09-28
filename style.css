@@ -34,9 +34,10 @@ body {
 }
 .search-box input {
     padding: 5px;
-    width: 70px;
+    width: 150px;
     border-bottom: 3px solid #00abf0;
     font-size: 16px;
+    text-transform: capitalize;
 }
 .search-box button {
     cursor: pointer;
