@@ -4,6 +4,7 @@ const result = document.getElementById("result");
 const sound = document.getElementById("sound");
 const btn = document.getElementById("search-btn");
 
+const speech = new SpeechSynthesisUtterance();
 btn.addEventListener("click", () => {
     const inputWord = document.getElementById("input-word").value;
     //   console.log(input);
@@ -16,7 +17,9 @@ btn.addEventListener("click", () => {
             result.innerHTML = `
             <div class="word">
                 <h3>${inputWord}</h3>
-                <button onclick="playSound()"><i class="fa-solid fa-volume-up"></i></button>
+                <button>
+                <i class="fa-solid fa-volume-up"></i>
+                </button>
             </div>
             <div class="details">
                 <p>${data[0].meanings[0].partOfSpeech}</p>
@@ -26,9 +29,21 @@ btn.addEventListener("click", () => {
                 ${data[0].meanings[0].definitions[0].definition}
             </p>
             <p class="word-example">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur,
-                quae.
+            ${data[0].meanings[0].definitions[0].example || ""}
             </p>
             `
+
+            const audioOutput = document.querySelector('.fa-volume-up')
+            audioOutput.addEventListener('click', () => {
+                speech.text = inputWord
+                speechSynthesis.speak(speech)
+            })
+            // sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
+            // console.log(sound);
+        })
+
+        .catch( () => {
+            result.innerHTML = `<h3 class = "error">Couldn't Find The Word</h3>`
         });
+       
 });
